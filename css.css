@@ -1,0 +1,310 @@
+body{
+	margin: 0;
+}
+
+.create_form{
+	position: fixed;
+	left: 50%;
+	top:50%;
+	width: 400px;
+	height:350px;
+	margin-left: -200px;
+	margin-top: -150px;
+	background: yellow;
+	z-index: 2;
+	border-radius: 20px 0 20px 0;
+}
+
+.prop_name{
+	text-align: center;
+	font-size: 15pt;
+}
+
+.button_done{
+	width: 200px;
+	margin-left: 100px;
+}
+
+.back_create_form{
+	position: fixed;
+	opacity: 0.9;
+	background: grey;
+	width: 100%;
+	height:100%;
+	z-index: 1;
+}
+
+.form_prop{
+	display: block;
+	margin: 20px 0 20px 50px;
+	width: 300px;	
+}
+
+
+#background_main{
+	position: fixed;
+	width: 100%;
+	height:100%;
+	background: url(back.png)
+}
+
+header{
+	display: flex;
+	position: fixed;
+	width: 100%;
+	height:40px;
+	background: black;
+	border-bottom: 2px solid;
+	color: #ffffff;
+	font-size: 10pt;
+	z-index: 1;
+}
+	#logo_ooo{
+		margin: 3px 0 0 5px;
+	}
+
+	#name_ooo{
+		margin: 9px 0 9px 0;
+		text-align:left;
+		width: 170px;
+		font-size: 14pt;
+		border-right: 1px solid;;
+	}
+
+	#workspace{
+		margin: 12px 15px 0 10px;
+		
+
+	}
+
+	#search_div{
+		flex: 2;
+		margin: 8px 0 0 5px;
+		position:relative;
+	}
+
+		#search{
+			height: 25px;
+			border-radius: 15px;
+			padding: 0 5px 0 25px;
+			transition: ease-out 0.2s;
+			z-index: 1;
+			width: 100%;
+			min-width: 20%;
+		}
+	
+			#search_icon{
+				position: absolute;
+				left: 5px;
+				top: 5px;
+				heigth: 20px;
+				width: 20px;
+				z-index: 2;
+				cursor: pointer;
+			}
+
+		#search:hover{
+			background-color: rgb(240,240,140);
+		}
+	
+		#search:focus{
+			border-radius: 5px;
+			outline: none;
+		}
+
+	#add_property{
+		position: relative;
+		margin: 10px 15px 0 0;
+		text-align:right;
+		flex: 1;
+	}
+
+		#clock{
+			position: absolute;
+			width: 80px;
+			height: 20px;
+			border-radius: 3px;
+			background: #3f3f3f;
+			right: 10px;
+			text-align: center;
+			font-size: 17px;
+			padding: 1px 0 0 0;
+		}
+
+#sort{
+	position: absolute;
+	width: 170px;
+	height: 400px;
+	background: white;
+	left: -2px;
+	top: 50%;
+	z-index: 1;
+	margin-top: -130px;
+	
+	border-radius: 0 40px 40px 0;
+	transition: ease-out 0.4s;
+	box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+	#sort_name{
+		margin: 5px 0 5px 15px;
+		font-size: 15pt;
+		width: 143px;
+		border-bottom: 1px solid;
+	}
+
+	.sort_prop{
+		margin:10px 0 15px 10px;
+	}
+
+	#slide{
+		position: absolute;
+
+		width: 40px;
+		height: 40px;
+		right: -20px;
+		top: 90px;
+		z-index: 2;
+		border-radius: 20px;
+		background: white;
+		box-shadow: 6px 0 4px -3px #222 ;
+		cursor: pointer;
+	}
+
+	.sort_prop p{
+		cursor: pointer;
+	}
+	
+	.slide_on{
+		left: -174px !important ;
+	}
+
+		#slide p{
+			position: absolute;
+			top: -5px;
+			right: 7px;
+		}
+
+#slider{
+	position: absolute;
+	margin-left: 50%;
+	left: -350px;
+	width: 700px;
+	top: 43px;
+	bottom: 0px;
+
+	background: #dddddd;
+	overflow-y: auto;
+	box-shadow: 0px 0 20px rgba(0,0,0,0.5);
+}
+
+	#add{
+		display: flex;
+		background: grey;
+		height: 30px;
+		border-bottom: 1px solid;
+	}
+
+		#number{
+			margin: 5px 0 0 15px;
+			text-align:left;
+			flex: 1;
+		}
+
+		#number_text{
+			margin: 5px 0 0 15px;
+			text-align:left;
+			flex: 0.5;			
+		}
+
+		#add_item{
+			margin: 5px 15px 0 0;
+			text-align:right;
+			flex: 1;
+		}
+		#add_item span{
+			cursor: pointer;
+		}
+
+		#refresh{
+			margin: 5px 0 0 0;
+			text-align:center;
+			flex: 1;
+		}
+		#refresh span{
+			cursor: pointer;
+		}
+
+	#main{
+		border: 2px solid;
+		margin: 5px;
+	}
+
+		.item{
+			display: flex;
+			justify-content: flex-end;
+			margin: 15px;
+			box-shadow: 0 0 20px rgba(0,0,0,0.5);;
+			border: 4px groove #f2f2f2;
+		}
+
+			.item_prop{
+				position: relative;
+				
+				width: 100%;
+			}
+				.item_name{
+					font-size: 20pt;
+					text-align: center;
+					text-decoration: underline;
+				}
+				.item_del{
+					position: absolute;
+					right: 5px;
+					bottom: 5px;
+					margin-bottom: 15px;
+				}
+	
+				.item_tel{
+					position: absolute;
+					right: 5px;
+					top: 5px;
+					margin-bottom: 15px;
+				}
+	
+				.item_property{
+					font-size: 12pt;
+					margin: 0 0 5px 15px;
+				}
+
+			.item_map{
+				
+				width: 120px;
+				border-left: 1px solid;
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
